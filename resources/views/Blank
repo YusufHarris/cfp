@@ -1,0 +1,36 @@
+<h2 class="text-center text-uppercase mb-4-5">Testimonials</h2>
+<div id="carouselTestimonials" class="carousel slide" data-ride="carousel" data-interval="7500">
+    <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-8 offset-2">
+                        <img src="https://a1pager.com/img/default-test-1.jpg" class="mb-3 rounded-circle" height="100">
+                        <p class="lead font-italic">Fantastic, I am totally blown away by this company! Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>                                        <p class="mb-0">&ndash; Steve, New York</p>                                    </div>
+                </div>
+            </div>
+                                    <div class="carousel-item">
+                <div class="row">
+                    <div class="col-8 offset-2">
+                        <img src="https://a1pager.com/img/default-test-2.jpg" class="mb-3 rounded-circle" height="100">
+                        <p class="lead font-italic">10/10 I have recommended this company to everyone I know! Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="mb-0">&ndash; Jane, Toronto</p>
+                      </div>
+                </div>
+            </div>
+                                    <div class="carousel-item">
+                <div class="row">
+                    <div class="col-8 offset-2">
+                        <img src="https://a1pager.com/img/default-test-3.jpg" class="mb-3 rounded-circle" height="100">
+                        <p class="lead font-italic">This company provides the best service in the industry! Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p class="mb-0">&ndash; Mikaela, Dubai</p>
+                      </div>
+                </div>
+            </div>
+                            </div>
+    <a class="carousel-control-prev text-dark" href="#carouselTestimonials" role="button" data-slide="prev">
+        <i class="fa fa-lg fa-chevron-left"></i>
+    </a>
+    <a class="carousel-control-next text-dark" href="#carouselTestimonials" role="button" data-slide="next">
+        <i class="fa fa-lg fa-chevron-right"></i>
+    </a>
+</div>
