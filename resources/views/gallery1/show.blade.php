@@ -9,8 +9,9 @@
             <h2 class="text-center text-uppercase mb-4-5">{{$gallery->title}}</h2>
             <div class="row">
               @foreach($images as $image)
+
                     <div class="col-md-3 mb-4">
-                        <img src="{{$image->imageName}}" class="w-100" style="border-top-left-radius:50px;border-top-right-radius:50px;">
+                        <img src="{{$image->imageName}}" class="w-100 avatar-m" style="border-top-left-radius:50px;border-top-right-radius:50px;">
                         <p class="text-center text-light bg-dark" style="border-bottom-right-radius:50px;border-bottom-left-radius:50px;">{{$image->description}}</p>
                     </div>
 

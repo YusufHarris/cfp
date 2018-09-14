@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Employee;
 use App\Beneficiary;
+use App\Gallery;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,8 +26,9 @@ class HomeController extends Controller
     public function index()
     {
       $employees = Employee::all();
-      $beneficiaries = Beneficiary::all();
-      return view('home', compact('employees','beneficiaries'));
+      $beneficiaries = Beneficiary::take(4)->get();
+      $galleries = Gallery::take(4)->get();
+      return view('home', compact('employees','beneficiaries','galleries'));
 
     }
 }

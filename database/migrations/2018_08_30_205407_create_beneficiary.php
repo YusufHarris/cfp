@@ -30,6 +30,6 @@ class CreateBeneficiary extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('beneficiaries');
     }
 }

@@ -22,7 +22,7 @@
                       <tr>
                         <td>{{$employee->id}}</td>
                         <td>
-                
+
                           <img src="{{$employee->avatar}}" onerror="this.src='https://i.imgur.com/fitWknA.png';" width="30px" height="30px" alt="{{$employee->name}} Photo" style="border-radius:50px;"/>
 
                         </td>
@@ -31,7 +31,7 @@
                         <td>
                             <a class="btn-primary" href="{{ route('employee.edit', $employee->id) }}">
                               {{_('Edit')}}
-                            </a.
+                            </a>
                         </td>
                       </tr>
                       @endforeach

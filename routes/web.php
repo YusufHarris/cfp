@@ -31,7 +31,8 @@ Route::get('/beneficiaries', 'BeneficiaryController@index')->name('beneficiaries
 Route::get('/beneficiaries/create','BeneficiaryController@create')->name('beneficiary.create');
 Route::post('/beneficiaries','BeneficiaryController@store')->name('beneficiary.store');
 Route::get('/beneficiaries/{id}','BeneficiaryController@edit')->name('beneficiary.edit');
-Route::patch('/beneficiaries/{id}','BeneficiaryController@update')->name('beneficiary.update');
+Route::post('/beneficiaries/{id}','BeneficiaryController@update')->name('beneficiary.update');
+Route::delete('/beneficiaries/{id}','BeneficiaryController@destroy')->name('beneficiary.destroy');
 
 //Gallery Routes
 Route::get('/image','ImageController@index')->name('image.index');

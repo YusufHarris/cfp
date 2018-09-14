@@ -13,6 +13,7 @@
                       <th><strong>Picture</strong></th>
                       <th><strong>Name</strong></th>
                       <th><strong>Occupation</strong></th>
+                      <th><strong>Edit</strong></th>
 
                     </thead>
                     <tbody>
@@ -20,10 +21,20 @@
                       <tr>
                         <td>{{$beneficiary->id}}</td>
                         <td>
-                          <img src="{{$beneficiary->avatar}}" onerror="this.src='https://i.imgur.com/fitWknA.png';" width="100px" height="100px" alt="{{$beneficiary->directory}}defavatar.jpg" style="border-radius:50px;"/>
+                          <img src="/{{$beneficiary->avatar}}" onerror="this.src='https://i.imgur.com/fitWknA.png';" width="100px" height="100px" alt="{{$beneficiary->directory}}defavatar.jpg" style="border-radius:50px;"/>
                         </td>
                         <td>{{$beneficiary->name}}</td>
                         <td>{{$beneficiary->occupation}}</td>
+                        <td>
+                            <a class="btn-primary" href="{{ route('beneficiary.edit', $beneficiary->id) }}">
+                              {{_('Edit')}}
+                            </a>
+                        </td>
+                        <td>
+                          <a class="btn-primary" href="{{ route('beneficiary.destroy', $beneficiary->id)}}">
+                            {{_('Delete')}}
+                          </a>
+                        </td>
 
                       </tr>
                       @endforeach

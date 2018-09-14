@@ -123,7 +123,7 @@ class EmployeeController extends Controller
       $employee->avatar = $request->file('avatar')->store('storage/empavatars');
 
 
-      // Save the user
+      // Save the Employee
       $employee->save();
       $employees = Employee::all();
       return view('employees.index',compact('employees'));

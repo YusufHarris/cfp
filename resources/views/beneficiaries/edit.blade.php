@@ -26,24 +26,24 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="title" class="col-md-4 col-form-label text-md-right">{{ __('Title') }}</label>
+                            <label for="occupation" class="col-md-4 col-form-label text-md-right">{{ __('Occupation') }}</label>
 
                             <div class="col-md-6">
-                                <input id="occupation" class="form-control" value="{{$beneficiary->title}}" name="occupation" required>
+                                <input id="occupation" class="form-control" value="{{$beneficiary->occupation}}" name="occupation" required>
 
-                                @if ($errors->has('title'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('title') }}</strong>
-                                    </span>
-                                @endif
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
+                            <label for="introduction" class="col-md-4 col-form-label text-md-right">{{ __('Introduction') }}</label>
 
                             <div class="col-md-6">
                                 <textarea id="introduction" type="text" value="{{$beneficiary->introduction}}" class="form-control" name="introduction" rows="3" cols="4"></textarea>
+                                @if ($errors->has('introduction'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('introduction') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 

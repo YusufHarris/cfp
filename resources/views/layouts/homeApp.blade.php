@@ -130,80 +130,66 @@
     <!-- navbar -->
 <nav id="menu" class="navbar sticky-top navbar-expand-md navbar-dark bg-primary navbar-laravel">
     <div class="container">
-                        <a class="navbar-brand" href="#home"><img src="/storage/Logo/cfplogo.png" onerror="this.src='https://i.imgur.com/KaRxkxl.png';" alt="CFP Logo" width="30px" height="30px"/> Community Forests Pemba</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#features">Focus</a></li>
-                <li class="nav-item"><a class="nav-link" href="#images">Images</a></li>
-                <li class="nav-item"><a class="nav-link" href="#staff">Staff</a></li>
-                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="#home"><img src="/storage/Logo/cfplogo.png" onerror="this.src='https://i.imgur.com/KaRxkxl.png';" alt="CFP Logo" width="30px" height="30px"/> Community Forests Pemba</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Focus</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galleries">Galleries</a></li>
+          <li class="nav-item"><a class="nav-link" href="#staff">Staff</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
     <div class="container">
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-
             </ul>
-
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
               <div class="container">
-
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <!-- Left Side Of Navbar -->
+                  <ul class="navbar-nav mr-auto">
+                  </ul>
+                </div>
+                <div id="app">
+                  <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                       <span class="navbar-toggler-icon"></span>
-                  </button>
-
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
                       <!-- Left Side Of Navbar -->
                       <ul class="navbar-nav mr-auto">
-
                       </ul>
-    </div>
-    <div id="app">
-            <div class="container">
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
+                      <!-- Right Side Of Navbar -->
+                      <ul class="navbar-nav ml-auto">
+                          <!-- Authentication Links -->
+                          @guest
+                              <li class="nav-item">
                                 <a class="btn-primary" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            <li class="nav-item">
+                              </li>
+                              <li class="nav-item">
                                 <a class="btn-primary" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @else
+                              </li>
+                          @else
                         <!--Drop Down-->
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                              </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

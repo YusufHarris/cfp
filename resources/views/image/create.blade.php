@@ -25,7 +25,7 @@
                                 <textarea id="description" type="text" class="form-control" name="description" rows="3" cols="4"></textarea>
                             </div>
                         </div>
-                        <p>The gallery will be saved in Gallery {{$gallery_id}}</p>
+                        <p>Gallery ID: {{$gallery_id}}</p>
                         <input type="hidden" class="form-control" id="gallery_id" name="gallery_id" value="{{$gallery_id}}">
 
                         <div class="form-group row mb-0">

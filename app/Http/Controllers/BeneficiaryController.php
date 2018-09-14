@@ -70,10 +70,11 @@ class BeneficiaryController extends Controller
      * @param  \App\r  $r
      * @return \Illuminate\Http\Response
      */
-    public function edit(r $r)
-    {
-        //
-    }
+     public function edit($id)
+     {
+       $beneficiary = Beneficiary::where('id', $id)->first();
+       return view('beneficiaries.edit',compact('beneficiary'));
+     }
 
     /**
      * Update the specified resource in storage.
@@ -84,7 +85,6 @@ class BeneficiaryController extends Controller
      */
      public function update(Request $request, $id)
      {
-
        $beneficiary = Beneficiary::where('id', $id)->first();
 
        $path = $request->file('avatar')->store('public/benavatars');
@@ -95,9 +95,9 @@ class BeneficiaryController extends Controller
        $beneficiary->avatar = $request->file('avatar')->store('storage/benavatars');
 
 
-       // Save the user
-       $employee->save();
-       $employees = Beneficiary::all();
+       // Save the beneficiary
+       $beneficiary->save();
+       $beneficiaries = Beneficiary::all();
        return view('beneficiaries.index',compact('beneficiaries'));
      }
 
@@ -107,8 +107,12 @@ class BeneficiaryController extends Controller
      * @param  \App\r  $r
      * @return \Illuminate\Http\Response
      */
-    public function destroy(r $r)
-    {
-        //
-    }
+     public function destroy($id)
+     {
+         //Get the Beneficiary
+         $beneficiary = Beneficiary::where('id', $id)->first();
+         $beneficiary->delete();
+         
+         return redirect('beneficiaries');
+     }
 }
